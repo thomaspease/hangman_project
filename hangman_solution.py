@@ -102,6 +102,13 @@ class Hangman:
         pass
 
 def play_game(word_list):
+    '''
+    Creates a game, which is an instance of the Hangman class, and triggers gameplay whilst certain conditions are met.
+    - The user has not run out of lives.
+    - The word has not been guessed.
+
+    When either of these conditions are met, the game is ended and a message is displayed.
+    '''
     game = Hangman(word_list, num_lives=5)
 
     while game.num_lives > 0 and game.num_letters > 0:
